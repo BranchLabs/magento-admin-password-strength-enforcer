@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <tabs>
+    <branchlabs translate="label" module="branchlabs_adminpasswordstrength">
+      <label>BranchLabs</label>
+      <sort_order>100</sort_order>
+    </branchlabs>
+  </tabs>
+  <sections>
+    <adminpasswordstrength translate="label" module="branchlabs_adminpasswordstrength">
+      <label>Admin Password Strength</label>
+      <tab>branchlabs</tab>
+      <sort_order>1000</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>0</show_in_website>
+      <show_in_store>0</show_in_store>
+      <groups>
+        <adminpasswordstrength_group translate="label" module="branchlabs_adminpasswordstrength">
+          <label>Admin Password Strength Settings</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>1000</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>0</show_in_website>
+          <show_in_store>0</show_in_store>
+          <fields>
+            <minimum_character_length translate="label">
+              <label>Minimum character length: </label>
+              <comment>Must be greater than 7.</comment>
+              <frontend_type>text</frontend_type>
+              <validate>validate-digits</validate>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </minimum_character_length>
+          </fields>
+        </adminpasswordstrength_group>
+      </groups>
+    </adminpasswordstrength>
+  </sections>
+</config>

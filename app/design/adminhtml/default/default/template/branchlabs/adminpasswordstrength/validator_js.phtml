@@ -1,0 +1,20 @@
+<?php
+    $l = Mage::getStoreConfig('adminpasswordstrength/adminpasswordstrength_group/minimum_character_length');
+    $l = (is_numeric($l) && $l >= 7) ? $l : 7;
+?>
+<script type="text/javascript">
+if(typeof Validation == "function" && typeof Validation.addAllThese == "function" ) {
+    Validation.addAllThese([
+        ['validate-admin-password', 'Please enter <?php echo $l; ?> or more characters. Password should contain both numeric and alphabetic characters.', function(v) {
+                var pass=v.strip();
+                if (0 == pass.length) {
+                    return true;
+                }
+                if (!(/[a-z]/i.test(v)) || !(/[0-9]/.test(v))) {
+                    return false;
+                }
+                return !(pass.length < <?php echo $l; ?>);
+        }]
+    ]);
+}
+</script>
